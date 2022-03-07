@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import "./variables.scss";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    background-color: $-Very-Dark-Blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    main {
+        width: 550px;
+        .header {
+            margin: 2em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $--color-white;
+            .header_title {
+                font-size: 2.4rem;
+                font-weight: 700;
+                letter-spacing: 1rem;
+            }
+        }
+        .input_field {
+            width: 100%;
+            position: relative;
+            margin-bottom: 2em;
+            .input_field_circule {
+                top: 50%;
+                left: 1em;
+                transform: translateY(-50%);
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 50%;
+                background-color: transparent;
+                border: 2px solid $-Dark-Grayish-Blue;
+                position: absolute;
+            }
+            input {
+                width: 100%;
+                height: 60px;
+                text-indent: 3em;
+                font-size: $-Font-size;
+                border: none;
+                outline: none;
+                background-color: $-Very-Dark-Grayish-Blue;
+                border-radius: 5px;
+                caret-color: $-bright-blue;
+                color: $-Light-Grayish-Blue;
+            }
+        }
+        .todo_input {
+            background-color: $-Very-Dark-Grayish-Blue;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            .todo_input_flex {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+                .todo_input_circule {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    border: 2px solid $-Dark-Grayish-Blue;
+                }
+                p {
+                    font-size: $-Font-size;
+                    color: $-Light-Grayish-Blue;
+                }
+            }
+        }
+        .todo_input:hover {
+            border: 1px solid $-Dark-Grayish-Blue;
+        }
+    }
+}

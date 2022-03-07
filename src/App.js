@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header"
+// import React, { useState } from "react"
+import "./style/style.scss"
+import backgroundImgDark from "./images/bg-desktop-dark.jpg"
+import InputField from "./components/InputField"
+// import backgroundImgLight from "./images/bg-desktop-light.jpg"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+export default function App() {
+
+    return (
+        <div className="app"
+            style={{
+                backgroundImage: `url(${backgroundImgDark})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100%',
+            }}
+        /*style={{ backgroundImage: mode ? `url(${backgroundImgDark})` : `url(${backgroundImgLight})`}}*/
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+            <main>
+                <Header />
+                <InputField />
+            </main>
+        </div >
+    )
+};
